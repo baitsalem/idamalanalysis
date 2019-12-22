@@ -23,7 +23,6 @@
 #
 ########################################################################
 
-
 from idaapi import PluginForm
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sip
