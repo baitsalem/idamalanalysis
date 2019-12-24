@@ -25,7 +25,17 @@
       </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="0">
-        <widget class="QTreeView" name="winapi_treeview"/>
+        <widget class="QTreeView" name="treeView"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="web">
+      <attribute name="title">
+       <string>WWW MSDN</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QWidget" name="widget" native="true"/>
        </item>
       </layout>
      </widget>
@@ -33,6 +43,7 @@
       <attribute name="title">
        <string>VUL_BOF_FUNC</string>
       </attribute>
+      <layout class="QGridLayout" name="gridLayout_3"/>
      </widget>
     </widget>
    </item>

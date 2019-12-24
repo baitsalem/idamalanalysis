@@ -4,6 +4,9 @@ from PyQt5.QtCore  import QModelIndex
 from PyQt5.QtWidgets import QWidget
 from core.winapimodelchild import WinApiModelc
 from idc import Jump
+from PyQt5 import QtWidgets
+from apitreeview import WinApiTreeView
+
 
 class MainForm(QWidget,Ui_Form):
     
@@ -17,7 +20,8 @@ class MainForm(QWidget,Ui_Form):
        
         
         self.winapi_model = WinApiModelc()
-        self.winapi_treeview.setModel(self.winapi_model)
+        self.winapi_treeview = WinApiTreeView(self.win_api_addr,self.winapi_model)
+        self.show_winapi_treeview()
         self.winapi_treeview.doubleClicked.connect(self._onFunctionClicked)
 
     def _onFunctionClicked(self, mi):
@@ -30,4 +34,13 @@ class MainForm(QWidget,Ui_Form):
         Jump(int(addr_to_jump,16))
 
 
+    def show_winapi_treeview(self):
 
+
+        gridLayout_2 = QtWidgets.QGridLayout(self.win_api_addr)
+        gridLayout_2.setContentsMargins(0, 0, 0, 0)
+        gridLayout_2.setObjectName("gridLayout_2")
+        gridLayout_2.addWidget(self.winapi_treeview, 0, 0, 1, 1)
+
+        
+        
