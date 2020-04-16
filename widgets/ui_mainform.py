@@ -19,14 +19,11 @@ class Ui_Form(object):
         self.win_api_addr = QtWidgets.QWidget()
         self.win_api_addr.setObjectName("win_api_addr")
         self.qtabw.addTab(self.win_api_addr, "")
+        
         self.web = QtWidgets.QWidget()
         self.web.setObjectName("web")
-        self.gridLayout_4 = QtWidgets.QGridLayout(self.web)
-        self.gridLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.gridLayout_4.setObjectName("gridLayout_4")
-        self.widget = QtWidgets.QWidget(self.web)
-        self.widget.setObjectName("widget")
-        self.gridLayout_4.addWidget(self.widget, 0, 0, 1, 1)
+        self.web_layout = QtWidgets.QVBoxLayout(self.web)
+        
         self.qtabw.addTab(self.web, "")
         self.vul_bof_func = QtWidgets.QWidget()
         self.vul_bof_func.setObjectName("vul_bof_func")

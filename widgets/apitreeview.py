@@ -8,7 +8,7 @@ class WinApiTreeView(QTreeView):
         subclass  QTreeView to manage windows api tree view
     '''
     
-    #menuActionClicked = pyqtSignal(list,'QString',name='menuActionClicked')
+    menuActionClicked = pyqtSignal('QString',name='menuActionClicked')
 
     def __init__(self,parent,model):
 
@@ -17,6 +17,7 @@ class WinApiTreeView(QTreeView):
         
         self.setContextMenuPolicy(Qt.CustomContextMenu)
         self.customContextMenuRequested.connect(self.openContextMenu) # widget class signal
+
         self.model = model
         self.setModel(self.model) 
     
@@ -40,7 +41,8 @@ class WinApiTreeView(QTreeView):
 
         if(item.childCount() == 0):
             api_name = item.data(1)
-            print(api_name)
+            self.menuActionClicked.emit(api_name)
+
 
         #indexes = self.selectedIndexes()
         #print(action.text())
