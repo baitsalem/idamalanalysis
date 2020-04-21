@@ -6,4 +6,5 @@ Plugin for IDA PRO. Tt is an IDA Pro extension that facilitates the task of malw
 - Seamless access to MSDN documentation of Windows API
 - Function identification and malware detection based on machine learning algorithms
 
-<img src="xref_method.png" alt="50%" style="zoom:70%;" />
+<img src="https://github.com/baitsalem/idamalanalysis/blob/master/idamal1.png" alt="50%" style="zoom:70%;" />
+<img src="https://github.com/baitsalem/idamalanalysis/blob/master/idamal2.png" alt="50%" style="zoom:70%;" />
