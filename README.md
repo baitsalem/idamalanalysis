@@ -2,7 +2,7 @@
 
 Plugin for IDA PRO (cf. idamalanalysis_v1.0 branch)
 
-Tt is an IDA Pro extension that facilitates the task of malware analysis with a current focus on x86 Windows. It consists of multiple tabs, containing functionality to achieve different goals:
+It's an IDA Pro extension that facilitates the task of malware analysis with a current focus on x86 Windows. It consists of multiple tabs, containing functionality to achieve different goals:
 
 - Identification of semantically interesting locations in the analysis target
 - Seamless access to MSDN documentation of Windows API
