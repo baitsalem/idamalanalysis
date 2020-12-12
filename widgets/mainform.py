@@ -4,13 +4,12 @@ from PyQt5.QtCore  import QModelIndex
 from PyQt5.QtWidgets import QWidget, QTextBrowser, QVBoxLayout
 from PyQt5 import QtWidgets
 
-from idc import Jump
 
 from core.winapimodelchild import WinApiModelc
 from core.msdnrequest import *
 from apitreeview import WinApiTreeView
 from msdnview import MsdnView 
-
+from ida_kernwin import jumpto
 
 class MainForm(QWidget,Ui_Form):
     
@@ -41,7 +40,7 @@ class MainForm(QWidget,Ui_Form):
         """
         item = mi.internalPointer()
         addr_to_jump = item.data(0)
-        Jump(int(addr_to_jump,16))
+        jumpto(int(addr_to_jump,16))
 
 
     def show_winapi_treeview(self):
